@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="<{$xoops_charset}>"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" href="<{$xoops_themecss}>" media="screen,tv" type="text/css" />
+<link rel="alternate stylesheet" media="screen" type="text/css" href="<{$xoops_imageurl}>style/text-small.css" title="small" />
+<link rel="alternate stylesheet" media="screen" type="text/css" href="<{$xoops_imageurl}>style/text-large.css" title="large" />
+<script type="text/javascript" src="<{$xoops_imageurl}>js/styleswitcher.js"></script>
+<script type="text/javascript" src="<{$xoops_imageurl}>js/toggle.js"></script>
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+function toggle(notifs_form) 
+{
+obj=document.getElementById(notifs_form);
+obj.style.display=!(obj.style.display=="block")? "block" : "none";  
+}
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id="header">
+  <tr>
+	<td nowrap="nowrap">
+	<h1><a href="<{$xoops_url}>/" title="<{$xoops_sitename}>"><{$xoops_sitename}></a></h1>
+	<h2><{$xoops_slogan}></h2>
+	</td>
+	<td width="100%" align="center">
+	<{$xoops_banner}>
+	</td>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <{if $xoops_lblocks == ""}>
+    <{else}>
+	<td id="leftsidebar">
+	<!-- Left BEGIN -->
+	<{foreach item=block from=$xoops_lblocks}>
+	<h3 class="blockTitle"><{$block.title}></h3>
+	<div class="blockContent"><{$block.content}></div>
+	<{/foreach}>
+	<!-- Left END -->
+	</td>
+	<{/if}>
+	<td valign="top">
+	  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td id="navigation"><a href="<{$xoops_url}>/">トップページ</a> &raquo; <{if $xoops_modulename == "" }><{$xoops_slogan}><{else}><a href="<{$xoops_url}>/modules/<{$xoops_dirname}>/"><{$xoops_modulename}></a><{/if}></td>
+			<td id="fontsizeChange" align="right">
+				<a href="javascript:void(0)" onclick="setActiveStyleSheet('small'); return false;" title="フォントサイズ：小さめ">S</a>
+				<a href="javascript:void(0)" onclick="setActiveStyleSheet(''); return false;" title="フォントサイズ：普通（デフォルト）">M</a>
+				<a href="javascript:void(0)" onclick="setActiveStyleSheet('large'); return false;" title="フォントサイズ：大きめ">L</a>
+			</td>
+		</tr>
+	  </table>
+	  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+		  <td id="content">
+		  	<{if $xoops_showcblock == 1}>
+			<!-- Center BEGIN -->
+			<{foreach item=block from=$xoops_ccblocks}>
+			<{if $block.weight < 10 }>
+			<h3 class="blockTitle"><{$block.title}></h3>
+			<div class="blockContent"><{$block.content}></div>
+			<{/if}>
+			<{/foreach}>
+			<!-- Center END -->
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			  <tr>
+				<td id="contentleft">
+				<!-- Center Left BEGIN -->
+				<{foreach item=block from=$xoops_clblocks}>
+				<h3 class="blockTitle"><{$block.title}></h3>
+				<div class="blockContent"><{$block.content}></div>
+				<{/foreach}>
+				<!-- Center Left End -->
+				</td>
+				<td id="contentright">
+				<!-- Center Right BEGIN -->
+				<{foreach item=block from=$xoops_crblocks}>
+				<h3 class="blockTitle"><{$block.title}></h3>
+				<div class="blockContent"><{$block.content}></div>
+				<{/foreach}>
+				<!-- Center Right End -->
+				</td>
+			  </tr>
+			</table>
+			<!-- Center BEGIN -->
+			<{foreach item=block from=$xoops_ccblocks}>
+			<{if $block.weight >= 10 }>
+			<h3 class="blockTitle"><{$block.title}></h3>
+			<div class="blockContent"><{$block.content}></div>
+			<{/if}>
+			<{/foreach}>
+			<!-- Center END -->
+			<{/if}>
+			<!-- Content BEGIN -->
+			<{$xoops_contents}>
+			<!-- Content END -->
+		  </td>
+		<{if $xoops_showrblock == 1}>
+		  <td id="rightsidebar">
+			<!-- Right BEGIN -->
+			<{foreach item=block from=$xoops_rblocks}>
+			<h3 class="blockTitle"><{$block.title}></h3>
+			<div class="blockContent"><{$block.content}></div>
+			<{/foreach}>
+			<!-- Right END -->
+		  </td>
+		<{/if}>
+		</tr>
+	  </table>
+	</td>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id="footer">
+  <tr>
+    <!-- Footer BEGIN -->
+    <td><{$xoops_footer}> :: Designed by <a href="http://www.theme4u.net/" target="_blank" title="Theme4u.Net">theme4u</a></td>
+    <!-- Footer END -->
+  </tr>
+</table>
+
+</body>
+</html>

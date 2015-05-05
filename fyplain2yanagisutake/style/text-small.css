@@ -1,0 +1,11 @@
+body{
+	font-size: 70%;
+	}
+
+table,tr,td{
+	font-size: 100%;
+	}
+
+input,select,textarea{
+	font-size: 80%;
+	}

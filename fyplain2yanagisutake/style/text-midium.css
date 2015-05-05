@@ -1,0 +1,102 @@
+
+@charset "EUC-JP";
+
+/* サイト全体のフォント */
+
+body{
+	font-size: 80%;
+	}
+
+table,tr,td{
+	font-size: 100%;
+	}
+
+input,textarea,select{
+	font-size: 100%;
+	}
+
+th{
+	font-family: "Trebuchet MS", "Lucida Grande", Tahoma, Verdana, sans-self;
+	}
+
+/* Block ------------------------------------- */
+
+/* Header ---------------- */
+
+#header h1{
+	font-size: 220%;
+	font-weight: normal;
+	font-family: Tahoma, Verdana, "Lucida Grande", sans-self;
+	}
+
+#header h2{
+	font-size: 100%;
+	font-weight: normal;
+	font-family: Tahoma, Verdana, "Lucida Grande", sans-self;
+	}
+
+
+/* Content --------------- */
+
+#content h3.blockTitle{
+	font-size: 100%;
+	font-family: Tahoma, Verdana, "Lucida Grande", sans-self;
+	}
+
+
+/* Left ------------------ */
+
+#leftsidebar h3.blockTitle{
+	font-size: 100%;
+	font-family: Tahoma, Verdana, "Lucida Grande", sans-self;
+	}
+
+
+/* Right ----------------- */
+
+#rightsidebar h3.blockTitle{
+	font-size: 100%;
+	font-family: Tahoma, Verdana, "Lucida Grande", sans-self;
+	}
+
+
+/* Menu -------------------------------------- */
+
+/* User Menu ------------- */
+
+/* Main Menu ------------- */
+
+td#mainmenu a.menuSub {
+	}
+
+
+/* Modules ----------------------------------- */
+
+/* NEWS ------------------ */
+
+.itemHead{
+	font-size: 130%;
+	}
+
+
+/* NEWBB ----------------- */
+
+.comTitle {
+	font-weight: bold;
+	}
+
+.comText {
+	line-height: 1.5em;
+	}
+
+.comUserStat {
+	font-weight: bold;
+	}
+
+.comUserRankText {
+	font-weight: bold;
+	}
+
+.comUserStatus {
+	font-weight: bold;
+	}
